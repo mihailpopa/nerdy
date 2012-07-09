@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HypnosisView.h"
 
 @implementation AppDelegate
 
@@ -15,12 +16,53 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+   // [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    //NSLog(@"%@", [[UIScreen mainScreen]bounds]);
+    //CGRect viewFrame =CGRectMake(16, 24, 100, 150);
+    //CGRect viewFrame2 = CGRectMake(20, 30, 50, 50);
+    
+    //HypnosisView *anotherView = [[HypnosisView alloc] initWithFrame:viewFrame2];
+    //[anotherView setBackgroundColor:[UIColor blueColor]];
+    //[view setBackgroundColor:[UIColor redColor]];
+    CGRect screenRect = [[self window]bounds];
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [[self window] addSubview:scrollView];
+    
+    CGRect bigRect = screenRect;
+    //bigRect.size.width *= 2.0;
+    
+    view = [[HypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:view];
+    [scrollView setContentSize:bigRect.size];
+        
+    //screenRect.origin.x = screenRect.size.width;
+    //HypnosisView *anotherView = [[HypnosisView alloc] initWithFrame:screenRect];
+    //[scrollView addSubview:anotherView];
+    //[scrollView setPagingEnabled:YES];
+    BOOL success = [view becomeFirstResponder];   
+    
+    [scrollView setMinimumZoomScale:1.0];
+    [scrollView setMaximumZoomScale:5.0];
+    [scrollView setDelegate:self];
+    
+    //[view addSubview:anotherView];
+
+    self.window.backgroundColor = [UIColor colorWithRed:100.6 green:100.6 blue:100.6 alpha:1];
+    BOOL succes = [view becomeFirstResponder];
+    if (succes)
+    {
+        NSLog(@"HypnosisView became the first responder");
+    }else{
+        NSLog(@"Could not become first responder");
+    }
     [self.window makeKeyAndVisible];
     return YES;
 }
-
+-(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return view;
+}
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

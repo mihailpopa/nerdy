@@ -13,6 +13,7 @@
 		74797B1615AB6F47000D7A2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74797B1415AB6F47000D7A2B /* InfoPlist.strings */; };
 		74797B1815AB6F47000D7A2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74797B1715AB6F47000D7A2B /* main.m */; };
 		74797B1C15AB6F47000D7A2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74797B1B15AB6F47000D7A2B /* AppDelegate.m */; };
+		74797B2415AB7016000D7A2B /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74797B2315AB7016000D7A2B /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		74797B0B15AB6F47000D7A2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		74797B0D15AB6F47000D7A2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74797B0F15AB6F47000D7A2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		74797B1315AB6F47000D7A2B /* Hypnosister-Info.plist */ = {isa = PBXFileReference; path = "Hypnosister-Info.plist"; sourceTree = "<group>"; };
+		74797B1315AB6F47000D7A2B /* Hypnosister-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hypnosister-Info.plist"; sourceTree = "<group>"; };
 		74797B1515AB6F47000D7A2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74797B1715AB6F47000D7A2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		74797B1915AB6F47000D7A2B /* Hypnosister-Prefix.pch */ = {isa = PBXFileReference; path = "Hypnosister-Prefix.pch"; sourceTree = "<group>"; };
-		74797B1A15AB6F47000D7A2B /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		74797B1915AB6F47000D7A2B /* Hypnosister-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hypnosister-Prefix.pch"; sourceTree = "<group>"; };
+		74797B1A15AB6F47000D7A2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		74797B1B15AB6F47000D7A2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74797B2215AB7016000D7A2B /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		74797B2315AB7016000D7A2B /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,8 @@
 		74797AFC15AB6F47000D7A2B = {
 			isa = PBXGroup;
 			children = (
+				74797B2215AB7016000D7A2B /* HypnosisView.h */,
+				74797B2315AB7016000D7A2B /* HypnosisView.m */,
 				74797B1115AB6F47000D7A2B /* Hypnosister */,
 				74797B0A15AB6F47000D7A2B /* Frameworks */,
 				74797B0815AB6F47000D7A2B /* Products */,
@@ -153,6 +158,7 @@
 			files = (
 				74797B1815AB6F47000D7A2B /* main.m in Sources */,
 				74797B1C15AB6F47000D7A2B /* AppDelegate.m in Sources */,
+				74797B2415AB7016000D7A2B /* HypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
